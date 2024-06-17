@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaac Newton</title>
+  <style>
+    /* Estilos com erros para serem corrigidos pelos alunos */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    
+    .header {
+      background-color: #ccc;
+      padding: 20px;
+      text-align: left;
+      display: inline; /* Erro 1: deveria ser block */
+    }
+    
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .image {
+      display: block;
+      margin: 10px auto;
+      border: 2px solid #333;
+      border-radius: 8px;
+    }
+    
+    .info {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      display: inline; /* Erro 2: deveria ser inline-block */
+      margin: 10px;
+      width: 40%;
+      text-align: justify;
+    }
+    
+    .info h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .info p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #666;
+      display: inline; /* Erro 3: deveria ser block */
+    }
+    
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      clear: both;
+      display: block;
+      width: 50%; /* Erro 4: largura muito grande */
+      margin: 0 auto; /* Erro 5: deveria ser margin-top */
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 style="color: #666">Isaac Newton</h1>
+    <img class="image" src="https://hips.hearstapps.com/hmg-prod/images/isaac_newton_1689_painting_sir_godfrey_kneller_public_domain_via_wikimedia_commons.jpg" alt="Isaac Newton">
+  </div>
+  
+  <div class="container">
+    <div class="info">
+      <h2>Biografia</h2>
+      <p>Isaac Newton foi um físico, matemático e astrônomo inglês. Ele é mais conhecido por sua lei da gravitação universal e suas três leis do movimento.</p>
+    </div>
+    
+    <div class="info">
+      <h2>Contribuições</h2>
+      <p>Newton fez contribuições significativas em óptica, desenvolvendo a teoria das cores e o telescópio refletor.</p>
+    </div>
+    
+    <div class="info">
+      <h2>Legado</h2>
+      <p>Seu trabalho teve um impacto profundo no desenvolvimento da física e é considerado um dos cientistas mais influentes de todos os tempos.</p>
+    </div>
+    
+    <div class="info">
+      <h2>Publicações</h2>
+      <p>As publicações de Newton abrangem áreas como matemática, óptica e filosofia natural.</p>
+    </div>
+    
+    <div class="info">
+      <h2>Prêmios</h2>
+      <p>Newton recebeu diversos prêmios ao longo de sua carreira, reconhecendo suas contribuições científicas.</p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p>&copy; 2024 Isaac Newton Foundation</p>
+  </div>
+</body>
+</html>
