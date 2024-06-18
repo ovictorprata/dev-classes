@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção de Displays</title>
+    <style>
+        .container {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .block-element {
+            display: block; /* Corrigido */
+            width: 100%;
+            padding: 10px;
+            background-color: lightblue;
+            margin-bottom: 5px;
+        }
+
+        .inline-element {
+            display: inline; /* Corrigido */
+            padding: 5px;
+            background-color: lightcoral;
+            margin-bottom: 5px;
+        }
+
+        .inline-block-element {
+            display: inline-block; /* Corrigido */
+            padding: 10px;
+            background-color: lightgreen;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block-element">Este é um elemento block 1.</div>
+        <div class="block-element">Este é um elemento block 2.</div>
+        <div class="block-element">Este é um elemento block 3.</div>
+        <div class="block-element">Este é um elemento block 4.</div>
+        <div class="block-element">Este é um elemento block 5.</div>
+
+        <span class="inline-element">Este é um elemento inline 1.</span>
+        <span class="inline-element">Este é um elemento inline 2.</span>
+        <span class="inline-element">Este é um elemento inline 3.</span>
+        <span class="inline-element">Este é um elemento inline 4.</span>
+        <span class="inline-element">Este é um elemento inline 5.</span>
+
+        <div class="inline-block-element">Este é um elemento inline-block 1.</div>
+        <div class="inline-block-element">Este é um elemento inline-block 2.</div>
+        <div class="inline-block-element">Este é um elemento inline-block 3.</div>
+        <div class="inline-block-element">Este é um elemento inline-block 4.</div>
+        <div class="inline-block-element">Este é um elemento inline-block 5.</div>
+    </div>
+</body>
+</html>
