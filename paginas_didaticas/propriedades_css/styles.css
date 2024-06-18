@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.background-container {
+  background-image: url('https://s2-techtudo.glbimg.com/SSAPhiaAy_zLTOu3Tr3ZKu2H5vg=/0x0:1024x609/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/c/u/15eppqSmeTdHkoAKM0Uw/dall-e-2.jpg'); /* Imagem de fundo */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+  background-position: center; /* Posição central da imagem de fundo */
+  border-top: 1px solid #000; /* Borda superior */
+  padding: 20px; /* Adiciona um padding para separar a borda superior */
+  height: 600px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #0056b3;
+}
+
+/* Seção de Cores */
+.texto-cor {
+  color: #ff6347; /* Tomate */
+}
+
+.fundo-cor {
+  background-color: #98fb98; /* Verde Pálido */
+  padding: 10px;
+}
+
+/* Seção de Tipografia */
+.fonte-tamanho {
+  font-size: 24px; /* Tamanho da fonte */
+}
+
+.fonte-familia {
+  font-family: 'Courier New', Courier, monospace; /* Família da fonte */
+}
+
+.fonte-estilo {
+  font-style: italic; /* Estilo da fonte */
+  font-weight: bold; /* Peso da fonte */
+}
+
+.decoracao-texto {
+  text-decoration: underline; /* Sublinhado */
+}
+
+.altura-linha {
+  line-height: 1.5; /* Altura da linha */
+}
+
+.transformacao-texto {
+  text-transform: uppercase; /* Transformação para maiúsculas */
+}
+
+.espacamento-letra {
+  letter-spacing: 20px; /* Espaçamento entre letras */
+}
+
+.espacamento-palavra {
+  word-spacing: 50px; /* Espaçamento entre palavras */
+}
+
+/* Seção de Bordas */
+.borda-solida {
+  border: 2px solid #000; /* Borda sólida */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.borda-pontilhada {
+  border: 2px dotted #000; /* Borda pontilhada */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.borda-arredondada {
+  border: 2px solid #000; /* Borda sólida */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
