@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 500vh;
+}
+.container {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.static-box {
+  position: static;
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin-bottom: 10px;
+}
+.relative-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 10px;
+}
+.absolute-box-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+.absolute-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+  top: 20px;
+  left: 20px;
+}
+.fixed-box {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+  bottom: 20px;
+  right: 20px;
+}
+.sticky-box {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: lightpink;
+  padding: 50px;
+  font-size: 20px;
+}
+
+#sticky-div {
+  height: 1200px;
+}
