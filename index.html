@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./styles/styles.css">
   <style>
     body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       font-family: sans-serif;
     }
     .navbar, .footer {
@@ -22,6 +25,15 @@
     }
     .list-group-item:hover {
       background-color: #f0f0f0;
+    }
+    .container {
+      flex: 1;
+    }
+    .footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
     }
   </style>
 </head>
@@ -43,14 +55,14 @@
     
     <h2 class="mt-4">Exercícios</h2>
     <div class="list-group">
-      <a href="./aula_01_introducao_html/index.html" class="list-group-item list-group-item-action">Aula 1: Introdução ao HTML</a>
+      <a href="./exercicios/displays/exercicios_display.html" class="list-group-item list-group-item-action">Aula 1: Introdução ao HTML</a>
       <a href="./exercicios/displays/exercicios_display.html" class="list-group-item list-group-item-action">Aula 5: Display e Position</a>
     </div>
   </div>
 
-  <footer class="footer mt-4 py-3">
+  <footer class="footer mt-4">
     <div class="container">
-      <span class="footer-text">© 2024 Aulas Online. Todos os direitos reservados.</span>
+      <span class="footer-text">© Aulas de HTML e CSS por @ovictorprata. Todos os direitos reservados.</span>
     </div>
   </footer>
 
