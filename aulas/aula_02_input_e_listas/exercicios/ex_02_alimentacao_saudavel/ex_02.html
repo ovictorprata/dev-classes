@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alimentação Saudável</title>
+</head>
+<body>
+
+  <header>
+    <h1>Guia de Alimentação Saudável</h1>
+  </header>
+  
+  <section>
+    <h2>Benefícios da Alimentação Saudável</h2>
+    <p>Uma alimentação saudável traz inúmeros benefícios para o corpo e a mente. Aqui estão alguns dos principais:</p>
+    <ul>
+      <li>Melhora a imunidade</li>
+      <li>Aumenta a energia</li>
+      <li>Ajuda na manutenção do peso</li>
+      <li>Melhora o humor</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Como Adotar Hábitos Saudáveis</h2>
+    <p>Adotar hábitos alimentares saudáveis pode ser fácil se seguir estes passos:</p>
+    <ol>
+      <li>Inclua frutas e vegetais na sua dieta diária</li>
+      <li>Beba muita água</li>
+      <li>Evite alimentos processados</li>
+      <li>Faça refeições regulares</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Receitas Saudáveis</h2>
+    <p>Aqui estão algumas receitas fáceis e saudáveis que você pode experimentar:</p>
+    <ul>
+      <li>Salada de Quinoa</li>
+      <li>Suco Verde</li>
+      <li>Sopa de Legumes</li>
+      <li>Frango Grelhado com Vegetais</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Formulário de Feedback</h2>
+    <p>Gostaríamos de saber sua opinião sobre nossas dicas e receitas. Por favor, preencha o formulário abaixo:</p>
+    
+    <form action="/submit-feedback" method="post">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name"><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      
+      <label for="age">Idade:</label>
+      <input type="number" id="age" name="age"><br><br>
+      
+      <label for="favorite-recipe">Receita Favorita:</label>
+      <select id="favorite-recipe" name="favorite-recipe">
+        <option value="salad">Salada de Quinoa</option>
+        <option value="juice">Suco Verde</option>
+        <option value="soup">Sopa de Legumes</option>
+        <option value="chicken">Frango Grelhado com Vegetais</option>
+      </select><br><br>
+      
+      <label for="comments">Comentários:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+      
+      <label for="newsletter">Deseja receber nossa newsletter?</label>
+      <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+      <label for="newsletter">Sim</label><br><br>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</body>
+</html>
