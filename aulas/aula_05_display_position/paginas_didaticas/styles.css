@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1, h2 {
+  margin: 0 0 1rem 0;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section p {
+  font-style: italic;
+}
+
+.position-examples, .display-examples {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.position-examples div, .display-examples div {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+}
+
+.static-box {
+  position: static;
+  background-color: #f8f9fa;
+}
+
+.relative-box {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background-color: #e9ecef;
+}
+
+.absolute-box-wrapper {
+  position: relative;
+  height: 150px;
+  background-color: #f1f3f5;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #dee2e6;
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ced4da;
+}
+
+.sticky-box {
+  position: -webkit-sticky; /* Para compatibilidade com Safari */
+  position: sticky;
+  top: 0;
+  background-color: #adb5bd;
+}
+
+.inline-box {
+  display: inline;
+  background-color: #ffcccb;
+  width: 890px;
+}
+
+.block-box {
+  display: block;
+  background-color: #d4edda;
+  width: 100%;
+}
+
+.inline-block-box {
+  display: inline-block;
+  background-color: #c3e6cb;
+  width: 400px;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
