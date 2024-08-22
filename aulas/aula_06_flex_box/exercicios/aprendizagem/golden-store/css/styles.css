@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  /* ADICIONE PROPRIEDADES FLEX AQUI*/
+}
+
+.header {
+  background-color: #f9dc5c;
+  padding: 20px;
+  /* ADICIONE PROPRIEDADES FLEX AQUI COM UM GAP DE 30%*/
+}
+
+header img {
+  height: 60px;
+  width: auto;
+}
+
+.header h2 {
+  margin: 0;
+  color: #d90368;
+}
+
+.nav {
+  /* ADICIONE PROPRIEDADES FLEX AQUI COM UM GAP DE 20PX*/
+  margin-top: 10px;
+}
+
+.nav a {
+  color: #d90368;
+  text-decoration: none;
+  font-size: 20px;
+  border-bottom: #d90368 1px solid;
+}
+
+.main-content {
+  /* ADICIONE PROPRIEDADES FLEX AQUI COM UM GAP DE 40PX*/
+  padding: 20px;
+}
+
+.section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff6cc;
+  border-radius: 10px;
+}
+
+.gallery-container {
+  /* ADICIONE PROPRIEDADES FLEX AQUI COM UM GAP DE 20PX*/
+}
+
+img {
+  width: 250px;
+  /* ADICIONE PROPRIEDADES FLEX AQUI */
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #f9dc5c;
+  padding: 10px;
+  text-align: center;
+  color: #d90368;
+}
