@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+.container {
+  /* INSIRA SOMENTE AQUI OS ESTILOS */
+}
+
+.box {
+  background-color: lightcoral;
+  width: 100px;
+  height: 100px;
+  border: 1px black solid;
+  box-sizing: border-box;
+}
