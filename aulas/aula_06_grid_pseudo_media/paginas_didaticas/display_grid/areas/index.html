@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplos de Grid</title>
+    <style>
+      /* Estilos globais */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      .container {
+        display: grid;
+        grid-gap: 15px;
+        margin: 20px;
+      }
+      .container > div {
+        padding: 30px;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      header,
+      footer {
+        font-weight: bold;
+      }
+
+      /* Exemplo 1 */
+      .example-1 {
+        grid-template-areas:
+          "header header header"
+          "main main sidebar"
+          "footer footer footer";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+      }
+      .example-1 header {
+        grid-area: header;
+        background-color: #8fb8e7; /* Azul suave */
+      }
+      .example-1 main {
+        grid-area: main;
+        background-color: #b9d7b6; /* Verde pastel */
+      }
+      .example-1 sidebar {
+        grid-area: sidebar;
+        background-color: #f7c6d2; /* Rosa claro */
+      }
+      .example-1 footer {
+        grid-area: footer;
+        background-color: #e1b4c9; /* Lilás suave */
+      }
+
+      /* Exemplo 2 */
+      .example-2 {
+        grid-template-areas:
+          "header header"
+          "main sidebar"
+          "footer footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+      }
+      .example-2 header {
+        grid-area: header;
+        background-color: #a1d4e6; /* Azul claro */
+      }
+      .example-2 main {
+        grid-area: main;
+        background-color: #d8f0c0; /* Verde menta */
+      }
+      .example-2 sidebar {
+        grid-area: sidebar;
+        background-color: #f0c2d7; /* Rosa suave */
+      }
+      .example-2 footer {
+        grid-area: footer;
+        background-color: #c7a0d8; /* Lavanda */
+      }
+
+      /* Exemplo 3 */
+      .example-3 {
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+      }
+      .example-3 header {
+        grid-area: header;
+        background-color: #9fc8d8; /* Azul claro acinzentado */
+      }
+      .example-3 main {
+        grid-area: main;
+        background-color: #d1e8d0; /* Verde suave */
+      }
+      .example-3 sidebar {
+        grid-area: sidebar;
+        background-color: #f2b1b8; /* Rosa claro e quente */
+      }
+      .example-3 footer {
+        grid-area: footer;
+        background-color: #d1a0d5; /* Lilás rosado */
+      }
+
+      /* Exemplo 4 */
+      .example-4 {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+          "header header"
+          "main sidebar"
+          "footer footer";
+        grid-template-rows: auto auto auto;
+      }
+      .example-4 header {
+        grid-area: header;
+        background-color: #a2c5db; /* Azul acinzentado */
+      }
+      .example-4 main {
+        grid-area: main;
+        background-color: #c8e6c9; /* Verde muito claro */
+      }
+      .example-4 sidebar {
+        grid-area: sidebar;
+        background-color: #f7b3c5; /* Rosa suave e quente */
+      }
+      .example-4 footer {
+        grid-area: footer;
+        background-color: #d1a8e1; /* Lilás pastel */
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-top: 20px; color: #333">
+      Exemplos de CSS Grid
+    </h1>
+
+    <!-- Exemplo 1 -->
+    <h2 style="text-align: center; color: #555">Exemplo 1</h2>
+    <div class="container example-1">
+      <header>Header</header>
+      <main>Main Content</main>
+      <sidebar>Sidebar</sidebar>
+      <footer>Footer</footer>
+    </div>
+
+    <!-- Exemplo 2 -->
+    <h2 style="text-align: center; color: #555">Exemplo 2</h2>
+    <div class="container example-2">
+      <header>Header</header>
+      <main>Main Content</main>
+      <sidebar>Sidebar</sidebar>
+      <footer>Footer</footer>
+    </div>
+
+    <!-- Exemplo 3 -->
+    <h2 style="text-align: center; color: #555">Exemplo 3</h2>
+    <div class="container example-3">
+      <header>Header</header>
+      <main>Main Content</main>
+      <sidebar>Sidebar</sidebar>
+      <footer>Footer</footer>
+    </div>
+
+    <!-- Exemplo 4 -->
+    <h2 style="text-align: center; color: #555">Exemplo 4</h2>
+    <div class="container example-4">
+      <header>Header</header>
+      <main>Main Content</main>
+      <sidebar>Sidebar</sidebar>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
