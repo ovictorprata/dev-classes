@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a192f; /* Azul escuro */
+  color: #ccd6f6; /* Azul claro para texto */
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Duas colunas: conteúdo principal e sidebar */
+  grid-template-rows: auto 400px auto auto; /* Cabeçalho, hero, sobre, rodapé */
+  grid-template-areas:
+    "header header"
+    "hero hero"
+    "about sidebar"
+    "footer footer";
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  padding: 20px;
+  background-color: #112240; /* Azul médio */
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #64ffda; /* Verde água para destaque */
+}
+
+.header p {
+  font-size: 1.2em;
+  color: #8892b0; /* Azul claro para texto secundário */
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #64ffda; /* Borda verde água */
+}
+
+.about {
+  grid-area: about;
+  background-color: #112240; /* Azul médio */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #64ffda; /* Verde água para títulos */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #112240; /* Azul médio */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sidebar h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #64ffda; /* Verde água para títulos */
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #ccd6f6; /* Azul claro para texto */
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 15px;
+  background-color: #112240; /* Azul médio */
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #8892b0; /* Azul claro para texto */
+}
