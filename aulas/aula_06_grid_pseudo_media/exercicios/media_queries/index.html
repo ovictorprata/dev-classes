@@ -22,8 +22,6 @@
       /* Container principal usando Grid */
       .container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Duas colunas */
-        grid-template-rows: auto 1fr auto; /* Cabeçalho, conteúdo, rodapé */
         grid-template-areas:
           "header header"
           "main main"
@@ -45,10 +43,7 @@
       .main {
         grid-area: main;
         display: grid;
-        grid-template-columns: repeat(
-          auto-fit,
-          minmax(250px, 1fr)
-        ); /* Colunas responsivas */
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
       }
 
