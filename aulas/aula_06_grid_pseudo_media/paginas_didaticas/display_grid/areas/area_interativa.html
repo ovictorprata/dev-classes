@@ -21,10 +21,26 @@
         align-items: center;
         width: 100%;
       }
+      .layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+        max-width: 900px;
+      }
+      .grid-container {
+        flex: 1;
+      }
+      .editor {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .container {
         display: grid;
         gap: 10px;
-        width: 90%;
+        width: 100%;
         max-width: 400px;
         height: auto;
         background-color: #333;
@@ -65,16 +81,15 @@
       }
 
       textarea {
-        width: 90%;
+        width: 100%;
         max-width: 320px;
-        height: 100px;
-        margin-top: 10px;
+        height: 60px;
         resize: vertical;
       }
       button {
         margin: 15px 0;
         padding: 10px 20px;
-        background-color: #5a2727;
+        background-color: #ff5733;
         color: white;
         border: none;
         border-radius: 5px;
@@ -83,22 +98,23 @@
         transition: background 0.3s;
       }
       button:hover {
-        background-color: #6b6968;
+        background-color: #e04e2a;
       }
       pre {
         background: #111;
         padding: 10px;
         text-align: left;
         border-radius: 5px;
-        width: 90%;
+        width: 100%;
         max-width: 320px;
         overflow-x: auto;
       }
       @media (min-width: 800px) {
-        .content {
+        .layout {
           flex-direction: row;
-          justify-content: center;
-          gap: 40px;
+        }
+        .editor,
+        .grid-container {
           align-items: flex-start;
         }
       }
@@ -107,35 +123,40 @@
   <body>
     <h2>Editor de Grid Template Areas</h2>
     <p>Modifique o layout abaixo editando o grid-template-areas.</p>
-    <textarea id="gridInput">
+
+    <div class="layout">
+      <div class="grid-container">
+        <h3>Grid</h3>
+        <div
+          class="container"
+          id="gridContainer"
+          style="
+            grid-template-areas:
+              'header header header'
+              'sidebar main main'
+              'sidebar extra ad'
+              'footer footer footer';
+          "
+        >
+          <div class="item item1">Header</div>
+          <div class="item item2">Sidebar</div>
+          <div class="item item3">Main</div>
+          <div class="item item4">Extra</div>
+          <div class="item item5">Footer</div>
+          <div class="item item6">Ad</div>
+        </div>
+      </div>
+
+      <div class="editor">
+        <h3>CSS</h3>
+        <textarea id="gridInput">
 "header header header"
 "sidebar main main"
 "sidebar extra ad"
 "footer footer footer"</textarea
-    >
-    <button onclick="updateGrid()">Aplicar</button>
-
-    <div class="content">
-      <div
-        class="container"
-        id="gridContainer"
-        style="
-          grid-template-areas:
-            'header header header'
-            'sidebar main main'
-            'sidebar extra ad'
-            'footer footer footer';
-        "
-      >
-        <div class="item item1">Header</div>
-        <div class="item item2">Sidebar</div>
-        <div class="item item3">Main</div>
-        <div class="item item4">Extra</div>
-        <div class="item item5">Footer</div>
-        <div class="item item6">Ad</div>
-      </div>
-
-      <pre id="cssCode">
+        >
+        <button onclick="updateGrid()">Aplicar</button>
+        <pre id="cssCode">
 .container {
     display: grid;
     gap: 10px;
@@ -145,7 +166,8 @@
     "sidebar extra ad"
     "footer footer footer";
 }</pre
-      >
+        >
+      </div>
     </div>
 
     <script>
