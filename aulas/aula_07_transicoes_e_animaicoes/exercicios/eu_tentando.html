@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        max-height: 300px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 20px;
+      }
+      .container img {
+        transition: transform 0.5s;
+        object-fit: cover;
+      }
+      .container img:hover {
+        transform: scale(1.1);
+      }
+      .container div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        text-align: center;
+        background-color: rgb(255, 153, 153, 0.7);
+        opacity: 0;
+        transition: opacity 500ms;
+      }
+      .container:hover div {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://cdn0.casamentos.com.br/article-vendor/2095/original/960/jpg/img-0204_13_242095-164744644985185.webp"
+        alt=""
+      />
+      <div>
+        <p>O dia do sim</p>
+      </div>
+    </div>
+  </body>
+</html>
