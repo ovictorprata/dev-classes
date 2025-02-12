@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Formulário de Envio</title>
   </head>
   <body>
+    <h1>Formulário de Contato</h1>
     <form id="meuFormulario">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="entry.813952493" />
+      <input type="text" id="nome" name="nome" required />
 
       <label for="email">E-mail:</label>
-      <input type="email" id="email" name="entry.1612077462" />
+      <input type="email" id="email" name="email" required />
 
       <button type="submit">Enviar</button>
     </form>
@@ -25,34 +26,30 @@
           // Pegar os valores dos inputs
           const nome = document.getElementById("nome").value;
           const email = document.getElementById("email").value;
-          console.log("Nome:", nome);
-          console.log("Email:", email);
 
-          // ID dos campos do Google Form
+          // URL do formulário Google (formResponse)
           const googleFormURL =
-            "https://docs.google.com/forms/d/e/1uDzNG4XykZnUFQcWlfCaAKrDhG-XQD5eSbk-gSgVOF0/formResponse";
+            "https://docs.google.com/forms/d/e/1FAIpQLSceUPYFXeZl70x16Q5yjkwr-toO4barCk4Gg8N01CXiyDSMcA/formResponse";
           const formData = new FormData();
 
-          // Adicionar os dados ao FormData
-          formData.append("entry.813952493", nome); // entry.813952493 é o ID do campo "Nome"
-          formData.append("entry.1612077462", email); // entry.1612077462 é o ID do campo "Email"
-
           // Enviar os dados para o Google Forms
+          formData.append("entry.123456789", nome); // entry.123456789 é o ID do campo "Nome"
+          formData.append("entry.987654321", email); // entry.987654321 é o ID do campo "Email"
+
+          // Usando Fetch para enviar os dados
           fetch(googleFormURL, {
             method: "POST",
             body: formData,
           })
             .then((response) => {
-              console.log("Status da resposta:", response.status);
-              if (response.status === 200) {
+              if (response.ok) {
                 alert("Dados enviados com sucesso!");
               } else {
                 alert("Houve um erro ao enviar os dados!");
               }
             })
             .catch((error) => {
-              console.error("Erro ao enviar:", error);
-              alert("Erro ao enviar os dados");
+              console.error("Erro:", error);
             });
         });
     </script>
