@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner circular */
+  border: 4px solid #64ffda; /* Verde água */
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorcer */
+  object-position: top center; /* Garante que o topo da imagem seja a parte centralizada */
+}
+
+.profile-name {
+  font-size: 2em;
+  margin-top: 10px;
+  color: #112240; /* Azul escuro */
+}
+
+.profile-title {
+  font-size: 1.2em;
+  color: #8892b0; /* Azul claro */
+}
+
+.profile-bio {
+  margin-bottom: 20px;
+}
+
+.profile-bio h2::before {
+  content: "👤 "; /* Ícone antes do título */
+}
+
+.profile-bio p::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #64ffda; /* Verde água */
+}
+
+.profile-bio p::first-line {
+  font-weight: bold;
+}
+
+.profile-skills {
+  margin-bottom: 20px;
+}
+
+.profile-skills h2::after {
+  content: " 💻"; /* Ícone após o título */
+}
+
+.profile-skills ul {
+  list-style: none;
+}
+
+.profile-skills li {
+  background-color: #112240; /* Azul escuro */
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.profile-skills li::before {
+  content: "✔ "; /* Ícone antes de cada item da lista */
+  color: #64ffda; /* Verde água */
+}
+
+.profile-contact {
+  margin-bottom: 20px;
+}
+
+.profile-contact h2::before {
+  content: "📧 "; /* Ícone antes do título */
+}
+
+.profile-contact p {
+  margin: 5px 0;
+}

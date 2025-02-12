@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.borda-preta {
+  border: 2px solid black;
+}
+
+.header {
+  grid-area: header;
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: inline-block;
+  width: 20vw;
+  height: 80vh;
+  background-color: gold;
+  padding: 10px;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: inline-block;
+  background-color: gray;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 70vw;
+}
+
+.toolbar {
+  display: inline-block;
+  background-color: orange;
+  padding: 10px;
+  width: 79vw;
+  margin-bottom: 20px;
+}
+
+.tool {
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  background-color: lightblue;
+  margin-right: 10px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.navbar {
+  display: inline-block;
+  text-align: right;
+}
+
+.map {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: gold;
+  padding: 10px;
+  text-align: center;
+}

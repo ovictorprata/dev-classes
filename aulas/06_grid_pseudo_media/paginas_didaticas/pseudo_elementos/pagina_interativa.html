@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de Pseudoelementos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+        max-width: 900px;
+      }
+      .editor {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-container {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 500px;
+        text-align: left;
+      }
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+      .input-container textarea {
+        padding: 5px;
+        margin-top: 5px;
+        width: 300px;
+        height: 50px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        margin: 15px 0;
+        padding: 10px 20px;
+        background-color: #ff5733;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #e04e2a;
+      }
+      pre {
+        background: #111;
+        padding: 10px;
+        text-align: left;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 320px;
+        overflow-x: auto;
+      }
+      .styled-text::before {
+        content: "";
+      }
+      .styled-text::after {
+        content: "";
+      }
+      @media (min-width: 800px) {
+        .layout {
+          flex-direction: row;
+          gap: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Editor de Pseudoelementos</h2>
+    <p>Modifique o estilo dos pseudoelementos abaixo editando os campos.</p>
+
+    <div class="layout">
+      <div class="text-container">
+        <h3>Texto</h3>
+        <p class="styled-text" id="styled-text">
+          Pseudoelementos em CSS são usados para estilizar partes específicas de
+          um elemento HTML sem a necessidade de adicionar classes ou IDs extras
+          ao código. Eles permitem a criação de conteúdo antes ou depois do
+          conteúdo real de um elemento, ou até mesmo a estilização de partes
+          internas, como a primeira letra ou linha de um texto. Os
+          pseudoelementos mais comuns são ::before, ::after, ::first-letter e
+          ::first-line.
+        </p>
+      </div>
+
+      <div class="editor">
+        <h3>CSS</h3>
+        <div class="input-container">
+          <label for="before">::before</label>
+          <textarea id="before">content: "[Início] "; color: red;</textarea>
+        </div>
+        <div class="input-container">
+          <label for="after">::after</label>
+          <textarea id="after">content: " [Fim]"; color: blue;</textarea>
+        </div>
+        <div class="input-container">
+          <label for="first-line">::first-line</label>
+          <textarea id="first-line">font-weight: bold; color: yellow;</textarea>
+        </div>
+        <div class="input-container">
+          <label for="first-letter">::first-letter</label>
+          <textarea id="first-letter">font-size: 2em; color: green;</textarea>
+        </div>
+        <button onclick="applyStyles()">Aplicar</button>
+        <pre><code id="css-code"></code></pre>
+      </div>
+    </div>
+
+    <script>
+      function applyStyles() {
+        const beforeStyle = document.getElementById("before").value;
+        const afterStyle = document.getElementById("after").value;
+        const firstLineStyle = document.getElementById("first-line").value;
+        const firstLetterStyle = document.getElementById("first-letter").value;
+
+        const styleTag = document.createElement("style");
+        styleTag.innerHTML = `
+                .styled-text::before { ${beforeStyle} }
+                .styled-text::after { ${afterStyle} }
+                .styled-text::first-line { ${firstLineStyle} }
+                .styled-text::first-letter { ${firstLetterStyle} }
+            `;
+
+        document.head.appendChild(styleTag);
+        updateCodeDisplay(
+          beforeStyle,
+          afterStyle,
+          firstLineStyle,
+          firstLetterStyle
+        );
+      }
+
+      function updateCodeDisplay(before, after, firstLine, firstLetter) {
+        const cssCode = `
+.styled-text::before { ${before} }
+.styled-text::after { ${after} }
+.styled-text::first-line { ${firstLine} }
+.styled-text::first-letter { ${firstLetter} }
+            `;
+        document.getElementById("css-code").textContent = cssCode;
+      }
+      applyStyles();
+    </script>
+  </body>
+</html>

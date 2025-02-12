@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio Restaurante Italiano</title>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+      }
+
+      /* Container principal usando Grid */
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "main main"
+          "footer footer";
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Estilos para cada área */
+      .header {
+        grid-area: header;
+        background-color: #c82333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h2 {
+        color: #c82333;
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Media Queries para responsividade */
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr; /* Uma coluna em telas menores */
+          grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        }
+
+        .main {
+          grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Cabeçalho -->
+      <header class="header">
+        <h1>Cardápio Restaurante Italiano</h1>
+      </header>
+
+      <!-- Conteúdo Principal -->
+      <main class="main">
+        <div class="card">
+          <h2>Pizza Margherita</h2>
+          <p>Molho de tomate, mussarela, manjericão fresco.</p>
+          <p>R$ 35,00</p>
+        </div>
+        <div class="card">
+          <h2>Spaghetti Carbonara</h2>
+          <p>Spaghetti, bacon, ovos, queijo parmesão.</p>
+          <p>R$ 40,00</p>
+        </div>
+        <div class="card">
+          <h2>Risoto de Funghi</h2>
+          <p>Arroz arbóreo, cogumelos, vinho branco.</p>
+          <p>R$ 45,00</p>
+        </div>
+        <div class="card">
+          <h2>Tiramisu</h2>
+          <p>Sobremesa clássica italiana com café e mascarpone.</p>
+          <p>R$ 20,00</p>
+        </div>
+      </main>
+
+      <!-- Rodapé -->
+      <footer class="footer">
+        <p>&copy; 2023 Restaurante Italiano. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+  </body>
+</html>

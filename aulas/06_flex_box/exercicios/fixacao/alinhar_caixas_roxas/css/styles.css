@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  color: white;
+  font-size: 40px;
+}
+
+.container {
+  /* INSIRA SOMENTE AQUI OS ESTILOS FLEX */
+  height: 100vh;
+}
+
+.box {
+  background-color: purple;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}

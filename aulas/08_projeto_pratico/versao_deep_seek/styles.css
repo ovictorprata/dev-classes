@@ -1,0 +1,205 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4dabf7; /* Azul mais claro para melhor contraste */
+}
+
+.secao-completa {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Fundos intercalados */
+#inicio {
+  background: url("./assets/background.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#sobre {
+  background-color: #1a1a1a; /* Preto */
+}
+
+#produtos {
+  background-color: #1400c9; /* Azul */
+}
+
+#contato {
+  background-color: #1a1a1a; /* Preto */
+}
+
+.conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#inicio h1 {
+  font-size: 6em;
+  margin-bottom: 10px;
+  color: #ffffff; /* Texto branco para contraste */
+}
+
+#inicio p {
+  font-size: 1.5em;
+}
+
+#sobre h2 {
+  font-size: 3em;
+  color: #228be6;
+}
+
+#sobre p {
+  font-size: 1.5em;
+}
+#sobre img {
+  max-height: 50vh;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#sobre img:hover {
+  transform: scale(1.05);
+}
+
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.produto {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#produtos h2 {
+  font-size: 3rem;
+}
+
+.produto:hover {
+  transform: translateY(-10px);
+  border: 2px solid #4dabf7; /* Azul mais claro para destaque */
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.produto h3 {
+  margin-top: 15px;
+  font-size: 2em;
+  color: #4dabf7; /* Azul mais claro para títulos */
+}
+
+.produto p {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#contato .conteudo {
+  max-width: 1000px; /* Aumentei a largura máxima do contêiner */
+  width: 90%; /* Garantir que ocupe 90% da largura da tela */
+  margin: 0 auto; /* Centralizar o contêiner */
+  text-align: start;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Garantir que o formulário ocupe toda a largura do contêiner */
+}
+
+#contato form input,
+#contato form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  background-color: #333;
+  color: #ffffff;
+  width: 100%; /* Garantir que os inputs ocupem toda a largura do formulário */
+}
+
+#contato form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+#contato form button {
+  padding: 15px 30px;
+  background-color: #4dabf7;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2em;
+  width: 100%; /* Garantir que o botão ocupe toda a largura do formulário */
+}
+
+#contato form button:hover {
+  background-color: #228be6;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+footer p {
+  color: #4dabf7; /* Azul mais claro para o texto do rodapé */
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escola Infinita</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      href="./assets/imgs/logo_quadrada_ico.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+
+      .navbar-brand {
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .custom-placeholder::placeholder {
+        color: #808080;
+        opacity: 1;
+      }
+
+      .custom-placeholder:focus {
+        color: black;
+      }
+
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+      .navbar {
+        background-color: #1e1e1e;
+      }
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #e0e0e0;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .card {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+      }
+      .form-control,
+      .form-check-input {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        border-color: #007bff;
+      }
+      .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+      }
+      .card-img-top {
+        height: 180px;
+      }
+      blockquote {
+        color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/imgs/logo_quadrada.png"
+            alt="Infinity School Logo"
+            width="30"
+            height="30"
+          />
+          Escola Infinita
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-light active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Cursos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-light dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Mais
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sobre Nós</a></li>
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Contato</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 text-light custom-placeholder"
+              type="search"
+              placeholder="Pesquisar..."
+              aria-label="Search"
+            />
+            <button class="btn btn-primary" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carrossel -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/imgs/carrossel_11.png" class="d-block w-100" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cursos de Tecnologia</h5>
+            <p>
+              Desenvolva suas habilidades tecnológicas com nossos cursos
+              especializados.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/imgs/carrossel_2.png"
+            class="d-block w-100"
+            alt="Curso de Marketing Digital"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Marketing Digital</h5>
+            <p>
+              Aprenda as melhores estratégias de marketing digital para crescer
+              no mercado.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/imgs/carrossel_3.png"
+            class="d-block w-100"
+            alt="Certificações"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Certificações</h5>
+            <p>
+              Conquiste certificações reconhecidas e dê um impulso à sua
+              carreira.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+
+    <!-- Cartões -->
+    <div class="container my-5">
+      <div class="row d-flex justify-content-center gap-5">
+        <div class="card col-sm-12 col-md-4" style="width: 18rem">
+          <img
+            src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/computer-coding.jpg"
+            class="card-img-top"
+            alt="Curso de Programação"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Curso de Programação</h5>
+            <p class="card-text">
+              Aprenda a programar com cursos de Python, JavaScript e muito mais.
+            </p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="card col-sm-12 col-md-4" style="width: 18rem">
+          <img
+            src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/09/graphic-design-useful-sites.jpg"
+            class="card-img-top"
+            alt="Curso de Design Gráfico"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Curso de Design Gráfico</h5>
+            <p class="card-text">
+              Desenvolva suas habilidades em design gráfico com ferramentas e
+              técnicas modernas.
+            </p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="card col-sm-12 col-md-4" style="width: 18rem">
+          <img
+            src="https://eu-images.contentstack.com/v3/assets/blt69509c9116440be8/blt78e30d2a19a7c7e1/64cb18833a147b0c51a1f5c5/datascience-pdusit-stock.jpg"
+            class="card-img-top"
+            alt="Curso de Análise de Dados"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Curso de Análise de Dados</h5>
+            <p class="card-text">
+              Aprenda a analisar e interpretar dados para tomar decisões
+              informadas.
+            </p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="card col-sm-12 col-md-4" style="width: 18rem">
+          <img
+            src="https://murilocardoso.com.br/wp-content/uploads/2024/04/melhores-aplicativos-marketing-digital.jpg"
+            class="card-img-top"
+            alt="Curso de Marketing"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Curso de Marketing</h5>
+            <p class="card-text">
+              Aprenda marketing digital com cursos em SEO, mídia paga, e
+              estratégias de redes sociais.
+            </p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulário de Contato -->
+    <div class="container mb-5">
+      <h5>Entre em Contato</h5>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Endereço de Email</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            Nunca compartilharemos seu email com outras pessoas.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputMessage" class="form-label">Mensagem</label>
+          <textarea
+            class="form-control"
+            id="exampleInputMessage"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Receber atualizações</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
+    <!-- Citação -->
+    <div class="container mb-5">
+      <div class="card">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              “A educação é a arma mais poderosa que você pode usar para mudar o
+              mundo.”
+            </p>
+            <footer class="blockquote-footer">Nelson Mandela</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-primary">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <ul class="nav flex-column text-start">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Sobre a Escola</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Equipe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Carreiras</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-auto">
+            <ul class="nav flex-column text-start">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  >Cursos de Programação</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  >Cursos de Marketing Digital</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Certificações</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-auto">
+            <ul class="nav flex-column text-start">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Webinars</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">E-books</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="col-12 bg-dark py-2">
+      <p class="text-center text-light">
+        © 2024 Escola Infinita. Todos os direitos reservados.
+      </p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

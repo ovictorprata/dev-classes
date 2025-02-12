@@ -1,0 +1,66 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Título principal */
+h1 {
+  font-size: 24px;
+  color: #ff6600; /* Laranja Itaú */
+  text-align: center;
+  border: 2px solid #333;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Parágrafo */
+p {
+  font-size: 16px;
+  margin: 20px;
+  border: 1px solid #ff6600;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Tabela */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+/* Lista */
+ul {
+  margin: 20px;
+  padding: 10px; /* Adiciona espaço dentro da caixa */
+  list-style-position: inside; /* Garante que as bolinhas fiquem dentro da caixa */
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+li {
+  margin: 5px 0;
+}
+
+a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

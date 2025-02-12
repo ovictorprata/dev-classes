@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria Simples</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #f4f4f4;
+        padding: 50px;
+      }
+
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      .foto {
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .foto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .foto:hover img {
+        opacity: 0.8;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="galeria">
+      <div class="foto">
+        <img
+          src="https://iso.500px.com/wp-content/uploads/2016/10/stock-photo-159358357-1500x982.jpg"
+          alt="Imagem 1"
+        />
+      </div>
+      <div class="foto">
+        <img
+          src="https://cdn.maioresemelhores.com/imagens/paisagens-mais-bonitas-do-brasil-og.jpg"
+          alt="Imagem 2"
+        />
+      </div>
+      <div class="foto">
+        <img
+          src="https://s2-casavogue.glbimg.com/74ok0rqx_swLjxL0TQmiTJYK0no=/0x0:2121x1414/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2023/S/h/okABr5QDOdoGDlASVrSg/06-as-paisagens-naturais-mais-lindas-do-brasil-fernando-de-noronha-min.jpg"
+          alt="Imagem 3"
+        />
+      </div>
+      <div class="foto">
+        <img
+          src="https://s2-casavogue.glbimg.com/pGduDbiKGCTguNBLTf-ua5lktFA=/0x0:2121x1414/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2023/R/y/EoOHxaQ62cwUyG1EyD9g/06-as-paisagens-naturais-mais-lindas-do-brasil-fernando-de-noronha2-min.jpg"
+          alt="Imagem 4"
+        />
+      </div>
+    </div>
+  </body>
+</html>

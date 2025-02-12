@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  flex-direction: column;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: #4caf50;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  animation: move 3s ease-in-out infinite;
+  border-radius: 15px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-200px); /* Começa fora à esquerda */
+  }
+  33% {
+    transform: translateX(200px); /* Vai para a direita */
+  }
+  66% {
+    transform: translateX(200px); /* Fica por 2 segundos na direita */
+  }
+  100% {
+    transform: translateX(-200px); /* Volta para a esquerda */
+  }
+}
+
+/* Diferentes funções de tempo para cada box */
+.box.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.box.ease {
+  animation-timing-function: ease;
+}
+
+.box.linear {
+  animation-timing-function: linear;
+}
+
+.box.ease-in {
+  animation-timing-function: ease-in;
+}
+
+.box.ease-out {
+  animation-timing-function: ease-out;
+}

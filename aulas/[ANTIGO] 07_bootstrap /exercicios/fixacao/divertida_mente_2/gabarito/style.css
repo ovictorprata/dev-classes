@@ -1,0 +1,35 @@
+.carousel-caption h5,
+.carousel-caption p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adiciona sombra ao texto */
+}
+
+.carousel-item {
+  height: 500px; /* Defina a altura desejada */
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cobre o contêiner sem distorção */
+}
+
+.bg-yellow {
+  background-color: rgb(241, 255, 45);
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.bg-purple {
+  background-color: rgb(201, 38, 201);
+}
+
+.bg-dark-green {
+  background-color: rgb(46, 193, 46);
+}
+
+.bg-dark-blue {
+  background-color: rgb(81, 81, 148);
+}
