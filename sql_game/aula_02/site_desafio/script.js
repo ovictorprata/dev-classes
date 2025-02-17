@@ -3,8 +3,30 @@ let bloqueado = false;
 let bloqueioTimeout;
 const TEMPO_BLOQUEIO = 60 * 60 * 1000;
 
+function criptografarTexto(texto) {
+  let textoCriptografado = "";
+  const deslocamento = 3;
+
+  for (let i = 0; i < texto.length; i++) {
+    let char = texto[i];
+
+    if (char.match(/[a-zA-Z]/)) {
+      let codigo = texto.charCodeAt(i);
+
+      if (char >= "A" && char <= "Z") {
+        char = String.fromCharCode(((codigo - 65 + deslocamento) % 26) + 65);
+      } else if (char >= "a" && char <= "z") {
+        char = String.fromCharCode(((codigo - 97 + deslocamento) % 26) + 97);
+      }
+    }
+    textoCriptografado += char;
+  }
+  return textoCriptografado;
+}
 function descriptografarTexto(texto) {
   let textoDescriptografado = "";
+  const deslocamento = 3;
+
   for (let i = 0; i < texto.length; i++) {
     let char = texto[i];
 
@@ -26,8 +48,13 @@ function descriptografarTexto(texto) {
   return textoDescriptografado;
 }
 
-const senhaCriptografada = "Z2UEY7MF";
+const senhaCriptografada = "W2RBV7JC";
+const senhaNormal = "T2OYS7GZ";
+
 const correctPassword = descriptografarTexto(senhaCriptografada);
+const correctPasswordNormal = criptografarTexto(senhaNormal);
+console.log("descriptografada: ", correctPassword);
+console.log("criptografada: ", correctPasswordNormal);
 
 let attemptCount = localStorage.getItem("attemptCount");
 
