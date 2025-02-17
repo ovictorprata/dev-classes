@@ -4,42 +4,76 @@ let bloqueioTimeout;
 const TEMPO_BLOQUEIO = 60 * 60 * 1000;
 
 function descriptografarTexto(texto) {
+  const mapaDescriptografar = {
+    4: "1",
+    5: "2",
+    6: "3",
+    7: "4",
+    8: "5",
+    9: "6",
+    0: "7",
+    1: "8",
+    2: "9",
+    3: "0",
+  };
+
   let textoDescriptografado = "";
   for (let i = 0; i < texto.length; i++) {
     let char = texto[i];
 
-    if (char.match(/[a-zA-Z]/)) {
+    // Verifica se é número e aplica o mapeamento reverso
+    if (char >= "0" && char <= "9") {
+      char = mapaDescriptografar[char] || char;
+    }
+    // Descriptografar letras (com deslocamento)
+    else if (char.match(/[a-zA-Z]/)) {
       let codigo = texto.charCodeAt(i);
 
       if (char >= "A" && char <= "Z") {
-        char = String.fromCharCode(
-          ((codigo - 65 - deslocamento + 26) % 26) + 65
-        );
+        char = String.fromCharCode(((codigo - 65 - 3 + 26) % 26) + 65); // Deslocamento reverso para maiúsculas
       } else if (char >= "a" && char <= "z") {
-        char = String.fromCharCode(
-          ((codigo - 97 - deslocamento + 26) % 26) + 97
-        );
+        char = String.fromCharCode(((codigo - 97 - 3 + 26) % 26) + 97); // Deslocamento reverso para minúsculas
       }
     }
+
     textoDescriptografado += char;
   }
   return textoDescriptografado;
 }
 
-function criptografarTexto(texto, deslocamento) {
+function criptografarTexto(texto) {
+  const mapaCriptografar = {
+    1: "4",
+    2: "5",
+    3: "6",
+    4: "7",
+    5: "8",
+    6: "9",
+    7: "0",
+    8: "1",
+    9: "2",
+    0: "3",
+  };
+
   let textoCriptografado = "";
   for (let i = 0; i < texto.length; i++) {
     let char = texto[i];
 
-    if (char.match(/[a-zA-Z]/)) {
+    // Verifica se é número e aplica o mapeamento
+    if (char >= "0" && char <= "9") {
+      char = mapaCriptografar[char] || char;
+    }
+    // Criptografar letras (com deslocamento)
+    else if (char.match(/[a-zA-Z]/)) {
       let codigo = texto.charCodeAt(i);
 
       if (char >= "A" && char <= "Z") {
-        char = String.fromCharCode(((codigo - 65 + deslocamento) % 26) + 65);
+        char = String.fromCharCode(((codigo - 65 + 3) % 26) + 65); // Exemplo de deslocamento de 3 para maiúsculas
       } else if (char >= "a" && char <= "z") {
-        char = String.fromCharCode(((codigo - 97 + deslocamento) % 26) + 97);
+        char = String.fromCharCode(((codigo - 97 + 3) % 26) + 97); // Exemplo de deslocamento de 3 para minúsculas
       }
     }
+
     textoCriptografado += char;
   }
   return textoCriptografado;
@@ -47,10 +81,8 @@ function criptografarTexto(texto, deslocamento) {
 
 const textoOriginal = "W2RBV7JC";
 const senhaCriptografada = criptografarTexto(textoOriginal, deslocamento);
-console.log(senhaCriptografada); // Resultado da criptografia
-
-const correctPassword = descriptografarTexto(senhaCriptografada);
-console.log(correctPassword); // W2RBV7JC
+const senhaDescriptografada = descriptografarTexto(senhaCriptografada);
+console.log(senhaCriptografada, senhaDescriptografada); // W2RBV7JC
 
 let attemptCount = localStorage.getItem("attemptCount");
 
@@ -151,7 +183,7 @@ function checkPassword() {
   setTimeout(() => {
     let message = document.querySelector(".buttons");
     if (inputValues === correctPassword) {
-      message.innerHTML = `<h2>Parabéns! Você decifrou a senha e pegou o criminoso! </h2><h3>Sid, você está PRESO!</h3><img src="sid.png" />`;
+      message.innerHTML = `<h2>Parabéns! Você decifrou a senha e pegou o criminoso! </h2><h3>Sid, você está PRESO!</h3><img src="assets/sid.png" />`;
     } else {
       document.querySelector("#tryAgain").style.display = "block";
       document.querySelector("#btnCheck").style.display = "none";

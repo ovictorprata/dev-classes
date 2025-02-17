@@ -3,58 +3,80 @@ let bloqueado = false;
 let bloqueioTimeout;
 const TEMPO_BLOQUEIO = 60 * 60 * 1000;
 
-function criptografarTexto(texto) {
-  let textoCriptografado = "";
-  const deslocamento = 3;
-
-  for (let i = 0; i < texto.length; i++) {
-    let char = texto[i];
-
-    if (char.match(/[a-zA-Z]/)) {
-      let codigo = texto.charCodeAt(i);
-
-      if (char >= "A" && char <= "Z") {
-        char = String.fromCharCode(((codigo - 65 + deslocamento) % 26) + 65);
-      } else if (char >= "a" && char <= "z") {
-        char = String.fromCharCode(((codigo - 97 + deslocamento) % 26) + 97);
-      }
-    }
-    textoCriptografado += char;
-  }
-  return textoCriptografado;
-}
 function descriptografarTexto(texto) {
-  let textoDescriptografado = "";
-  const deslocamento = 3;
+  const mapaDescriptografar = {
+    4: "1",
+    5: "2",
+    6: "3",
+    7: "4",
+    8: "5",
+    9: "6",
+    0: "7",
+    1: "8",
+    2: "9",
+    3: "0",
+  };
 
+  let textoDescriptografado = "";
   for (let i = 0; i < texto.length; i++) {
     let char = texto[i];
 
-    if (char.match(/[a-zA-Z]/)) {
+    if (char >= "0" && char <= "9") {
+      char = mapaDescriptografar[char] || char;
+    } else if (char.match(/[a-zA-Z]/)) {
       let codigo = texto.charCodeAt(i);
 
       if (char >= "A" && char <= "Z") {
-        char = String.fromCharCode(
-          ((codigo - 65 - deslocamento + 26) % 26) + 65
-        );
+        char = String.fromCharCode(((codigo - 65 - 3 + 26) % 26) + 65);
       } else if (char >= "a" && char <= "z") {
-        char = String.fromCharCode(
-          ((codigo - 97 - deslocamento + 26) % 26) + 97
-        );
+        char = String.fromCharCode(((codigo - 97 - 3 + 26) % 26) + 97);
       }
     }
+
     textoDescriptografado += char;
   }
   return textoDescriptografado;
 }
 
-const senhaCriptografada = "W2RBV7JC";
-const senhaNormal = "T2OYS7GZ";
+function criptografarTexto(texto) {
+  const mapaCriptografar = {
+    1: "4",
+    2: "5",
+    3: "6",
+    4: "7",
+    5: "8",
+    6: "9",
+    7: "0",
+    8: "1",
+    9: "2",
+    0: "3",
+  };
 
-const correctPassword = descriptografarTexto(senhaCriptografada);
-const correctPasswordNormal = criptografarTexto(senhaNormal);
-console.log("descriptografada: ", correctPassword);
-console.log("criptografada: ", correctPasswordNormal);
+  let textoCriptografado = "";
+  for (let i = 0; i < texto.length; i++) {
+    let char = texto[i];
+
+    if (char >= "0" && char <= "9") {
+      char = mapaCriptografar[char] || char;
+    } else if (char.match(/[a-zA-Z]/)) {
+      let codigo = texto.charCodeAt(i);
+
+      if (char >= "A" && char <= "Z") {
+        char = String.fromCharCode(((codigo - 65 + 3) % 26) + 65);
+      } else if (char >= "a" && char <= "z") {
+        char = String.fromCharCode(((codigo - 97 + 3) % 26) + 97);
+      }
+    }
+
+    textoCriptografado += char;
+  }
+  return textoCriptografado;
+}
+
+const textoOriginal = "PB8RD6J6";
+const senhaCriptografada = criptografarTexto(textoOriginal, deslocamento);
+const senhaDescriptografada = descriptografarTexto(senhaCriptografada);
+console.log(senhaCriptografada, senhaDescriptografada);
 
 let attemptCount = localStorage.getItem("attemptCount");
 
@@ -140,7 +162,7 @@ function checkPassword() {
     setTimeout(() => {
       inputs[i].style.transform = "rotateY(110deg)";
       setTimeout(() => {
-        if (inputValues[i] === correctPassword[i]) {
+        if (inputValues[i] === senhaDescriptografada[i]) {
           inputs[i].classList.add("green");
         } else {
           inputs[i].classList.add("red");
@@ -151,12 +173,17 @@ function checkPassword() {
   }
 
   setTimeout(() => {
-    let message = document.querySelector("#message");
-    if (inputValues === correctPassword) {
-      message.innerHTML = `<h2>O criminoso conseguiu fugir! Você falhou na missão.</h2>`;
-      setTimeout(() => {
-        window.location.href = "parte2.html";
-      }, 3000);
+    let message = document.querySelector(".buttons");
+    if (inputValues === senhaDescriptografada) {
+      message.innerHTML = `<h2>Parabéns! Você decifrou a senha, mas o criminoso foi mais rápido que você :(</h2>`;
+    } else {
+      document.querySelector("#tryAgain").style.display = "block";
+      document.querySelector("#btnCheck").style.display = "none";
+
+      if (attemptCount >= 3) {
+        bloqueado = true;
+        bloquearBotao();
+      }
     }
   }, 4000);
 }
