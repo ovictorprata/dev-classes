@@ -152,7 +152,9 @@ function checkPassword() {
   // Se houver 3 ou mais caracteres iguais, bloqueia o usuário
   for (let char in charCount) {
     if (charCount[char] >= 3) {
-      alert("A senha não pode ter 3 ou mais caracteres iguais!");
+      alert(
+        "Tá tentando acertar a senha no chute? Deixa de preguiça e vá estudar!"
+      );
       return;
     }
   }
