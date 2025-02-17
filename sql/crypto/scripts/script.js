@@ -33,6 +33,6 @@ function criptografarTexto(texto) {
   return textoCriptografado;
 }
 
-const senha = "MY5OA3G3";
+const senha = "W2RBV7JC";
 const senhaCriptografada = criptografarTexto(senha);
 console.log(senhaCriptografada);

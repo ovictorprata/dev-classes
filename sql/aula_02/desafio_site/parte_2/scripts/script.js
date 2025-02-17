@@ -68,7 +68,7 @@ function handleBackspace(event, index) {
 
 function bloquearBotao() {
   const btnCheck = document.querySelector("#btnCheck");
-  let contador = 3;
+  let contador = 180;
   btnCheck.setAttribute("disabled", "");
 
   const intervalo = setInterval(() => {

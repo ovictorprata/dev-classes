@@ -21,18 +21,15 @@ function descriptografarTexto(texto) {
   for (let i = 0; i < texto.length; i++) {
     let char = texto[i];
 
-    // Verifica se é número e aplica o mapeamento reverso
     if (char >= "0" && char <= "9") {
       char = mapaDescriptografar[char] || char;
-    }
-    // Descriptografar letras (com deslocamento)
-    else if (char.match(/[a-zA-Z]/)) {
+    } else if (char.match(/[a-zA-Z]/)) {
       let codigo = texto.charCodeAt(i);
 
       if (char >= "A" && char <= "Z") {
-        char = String.fromCharCode(((codigo - 65 - 3 + 26) % 26) + 65); // Deslocamento reverso para maiúsculas
+        char = String.fromCharCode(((codigo - 65 - 3 + 26) % 26) + 65);
       } else if (char >= "a" && char <= "z") {
-        char = String.fromCharCode(((codigo - 97 - 3 + 26) % 26) + 97); // Deslocamento reverso para minúsculas
+        char = String.fromCharCode(((codigo - 97 - 3 + 26) % 26) + 97);
       }
     }
 
@@ -41,48 +38,8 @@ function descriptografarTexto(texto) {
   return textoDescriptografado;
 }
 
-function criptografarTexto(texto) {
-  const mapaCriptografar = {
-    1: "4",
-    2: "5",
-    3: "6",
-    4: "7",
-    5: "8",
-    6: "9",
-    7: "0",
-    8: "1",
-    9: "2",
-    0: "3",
-  };
-
-  let textoCriptografado = "";
-  for (let i = 0; i < texto.length; i++) {
-    let char = texto[i];
-
-    // Verifica se é número e aplica o mapeamento
-    if (char >= "0" && char <= "9") {
-      char = mapaCriptografar[char] || char;
-    }
-    // Criptografar letras (com deslocamento)
-    else if (char.match(/[a-zA-Z]/)) {
-      let codigo = texto.charCodeAt(i);
-
-      if (char >= "A" && char <= "Z") {
-        char = String.fromCharCode(((codigo - 65 + 3) % 26) + 65); // Exemplo de deslocamento de 3 para maiúsculas
-      } else if (char >= "a" && char <= "z") {
-        char = String.fromCharCode(((codigo - 97 + 3) % 26) + 97); // Exemplo de deslocamento de 3 para minúsculas
-      }
-    }
-
-    textoCriptografado += char;
-  }
-  return textoCriptografado;
-}
-
-const textoOriginal = "W2RBV7JC";
-const senhaCriptografada = criptografarTexto(textoOriginal, deslocamento);
-const senhaDescriptografada = descriptografarTexto(senhaCriptografada);
-console.log(senhaCriptografada, senhaDescriptografada); // W2RBV7JC
+const textoOriginal = "Z5UEY0MF";
+const senhaDescriptografada = descriptografarTexto(textoOriginal);
 
 let attemptCount = localStorage.getItem("attemptCount");
 
@@ -111,7 +68,7 @@ function handleBackspace(event, index) {
 
 function bloquearBotao() {
   const btnCheck = document.querySelector("#btnCheck");
-  let contador = 3;
+  let contador = 180;
   btnCheck.setAttribute("disabled", "");
 
   const intervalo = setInterval(() => {
@@ -142,14 +99,12 @@ function checkPassword() {
     return;
   }
 
-  // Verificar se há 3 ou mais caracteres iguais
   let charCount = {};
   for (let i = 0; i < inputValues.length; i++) {
     let char = inputValues[i];
     charCount[char] = (charCount[char] || 0) + 1;
   }
 
-  // Se houver 3 ou mais caracteres iguais, bloqueia o usuário
   for (let char in charCount) {
     if (charCount[char] >= 3) {
       alert(
@@ -172,7 +127,7 @@ function checkPassword() {
     setTimeout(() => {
       inputs[i].style.transform = "rotateY(110deg)";
       setTimeout(() => {
-        if (inputValues[i] === correctPassword[i]) {
+        if (inputValues[i] === senhaDescriptografada[i]) {
           inputs[i].classList.add("green");
         } else {
           inputs[i].classList.add("red");
@@ -184,8 +139,10 @@ function checkPassword() {
 
   setTimeout(() => {
     let message = document.querySelector(".buttons");
-    if (inputValues === correctPassword) {
-      message.innerHTML = `<h2>Parabéns! Você decifrou a senha e pegou o criminoso! </h2><h3>Sid, você está PRESO!</h3><img src="assets/sid.png" />`;
+    if (inputValues === senhaDescriptografada) {
+      message.innerHTML = `<h2>Parabéns! Você decifrou a senha e pegou o criminoso! </h2><h3>Sid, você está PRESO!</h3><img src="assets/sid.png" />
+      <p>Mas será que acabou por aqui?</p>
+      `;
     } else {
       document.querySelector("#tryAgain").style.display = "block";
       document.querySelector("#btnCheck").style.display = "none";
