@@ -26,8 +26,31 @@ function descriptografarTexto(texto) {
   return textoDescriptografado;
 }
 
-const senhaCriptografada = "Z2UEY7MF";
+function criptografarTexto(texto, deslocamento) {
+  let textoCriptografado = "";
+  for (let i = 0; i < texto.length; i++) {
+    let char = texto[i];
+
+    if (char.match(/[a-zA-Z]/)) {
+      let codigo = texto.charCodeAt(i);
+
+      if (char >= "A" && char <= "Z") {
+        char = String.fromCharCode(((codigo - 65 + deslocamento) % 26) + 65);
+      } else if (char >= "a" && char <= "z") {
+        char = String.fromCharCode(((codigo - 97 + deslocamento) % 26) + 97);
+      }
+    }
+    textoCriptografado += char;
+  }
+  return textoCriptografado;
+}
+
+const textoOriginal = "W2RBV7JC";
+const senhaCriptografada = criptografarTexto(textoOriginal, deslocamento);
+console.log(senhaCriptografada); // Resultado da criptografia
+
 const correctPassword = descriptografarTexto(senhaCriptografada);
+console.log(correctPassword); // W2RBV7JC
 
 let attemptCount = localStorage.getItem("attemptCount");
 
