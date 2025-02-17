@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function redirectToSamePage() {
+        setTimeout(function () {
+          window.location.href = window.location.href; // Redireciona para a mesma página
+        }, 1000); // Tempo para garantir que o envio foi feito
+      }
+    </script>
+  </head>
+  <body>
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSceUPYFXeZl70x16Q5yjkwr-toO4barCk4Gg8N01CXiyDSMcA/formResponse"
+      method="post"
+      onsubmit="redirectToSamePage()"
+    >
+      <input type="text" name="entry.813952493" placeholder="digite seu nome" />
+      <input type="text" name="entry.1612077462" id="" />
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>

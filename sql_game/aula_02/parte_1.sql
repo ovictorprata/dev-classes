@@ -1,0 +1,118 @@
+CREATE DATABASE cinepolis;
+USE cinepolis;
+CREATE TABLE filmes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    diretor VARCHAR(100),
+    ano_lancamento INT
+);
+
+
+CREATE TABLE personagens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    filme_id INT,
+    idade INT,
+    esta_morto BOOLEAN,
+    eh_superheroi BOOLEAN,
+    FOREIGN KEY (filme_id) REFERENCES filmes(id)
+);
+
+
+-- Filmes
+INSERT INTO filmes (nome, diretor, ano_lancamento) VALUES
+('Divertida Mente', 'Pete Docter', 2015),
+('Frozen', 'Chris Buck, Jennifer Lee', 2013),
+('Kung Fu Panda', 'Mark Osborne, John Stevenson', 2008),
+('Shrek', 'Andrew Adamson, Vicky Jenson', 2001),
+('Branca de Neve e os Sete Anões', 'David Hand', 1937),
+('Rei Leão', 'Roger Allers, Rob Minkoff', 1994),
+('Madagascar', 'Eric Darnell, Tom McGrath', 2005),
+('A Era do Gelo', 'Chris Wedge', 2002),
+('Os Incríveis', 'Brad Bird', 2004),
+('Toy Story', 'John Lasseter', 1995),
+('Vingadores', 'Joss Whedon', 2012),
+('Minha Mãe é uma Peça', 'Andresene Giamatti', 2013),
+('O Auto da Compadecida', 'Guel Arraes', 2000),
+('Tropa de Elite', 'José Padilha', 2007),
+('Se Eu Fosse Você', 'Daniel Filho', 2006),
+('Cidade de Deus', 'Fernando Meirelles', 2002);
+
+
+INSERT INTO personagens (nome, filme_id, idade, esta_morto, eh_superheroi) VALUES
+
+('Shifu', 3, 60, FALSE, FALSE),
+('Zé Pequeno', 16, 25, TRUE, FALSE),
+('Fiona', 4, 30, FALSE, FALSE),
+('Homem de Ferro', 11, 42, TRUE, TRUE),
+('Diego', 8, 27, FALSE, FALSE),
+('Shrek', 4, 35, FALSE, FALSE),
+('Tristeza', 1, 33, FALSE, FALSE),
+('Scrat', 8, 15, FALSE, FALSE),
+('Gelado', 9, 42, FALSE, TRUE),
+('Cláudio', 15, 45, FALSE, FALSE),
+('Tai Lung', 3, 35, FALSE, FALSE),
+('Kristoff', 2, 21, FALSE, FALSE),
+('Bené', 16, 23, TRUE, FALSE),
+('Thor', 11, 1500, FALSE, TRUE),
+('Nossa Senhora', 13, 2000, FALSE, FALSE),
+('Zangado', 5, 53, FALSE, FALSE),
+('Hans', 2, 23, FALSE, FALSE),
+('Alegria', 1, 33, FALSE, FALSE),
+('Gato de Botas', 4, 8, FALSE, FALSE),
+('Riley', 1, 11, FALSE, FALSE),
+('Sven', 2, 8, FALSE, FALSE),
+('Baiano', 14, 30, TRUE, FALSE),
+('Nojinho', 1, 33, FALSE, FALSE),
+('Scar', 6, 13, TRUE, FALSE),
+('Anna', 2, 18, FALSE, FALSE),
+('Mestre', 5, 55, FALSE, FALSE),
+('Po', 3, 20, FALSE, FALSE),
+('Dunga', 5, 50, FALSE, FALSE),
+('Mufasa', 6, 12, TRUE, FALSE),
+('Juliano', 12, 25, FALSE, FALSE),
+('Matias', 14, 27, FALSE, FALSE),
+('Andy', 10, 8, FALSE, FALSE),
+('Helena', 15, 40, FALSE, FALSE),
+('Branca de Neve', 5, 14, FALSE, FALSE),
+('Violeta', 9, 14, FALSE, TRUE),
+('João Grilo', 13, 30, FALSE, FALSE),
+('Flecha', 9, 10, FALSE, TRUE),
+('Marty', 7, 10, FALSE, FALSE),
+('Síndrome', 9, 25, TRUE, FALSE),
+('Lorde Farquaad', 4, 45, TRUE, FALSE),
+('Macaco', 3, 28, FALSE, FALSE),
+('Melman', 7, 11, FALSE, FALSE),
+('Capitão América', 11, 100, FALSE, TRUE),
+('Tigresa', 3, 25, FALSE, FALSE),
+('Sid', 8, 25, FALSE, FALSE),
+('Gloria', 7, 11, FALSE, FALSE),
+('Rei Julien', 7, 9, FALSE, FALSE),
+('Viúva Negra', 11, 35, TRUE, TRUE),
+('Marcelina', 12, 23, FALSE, FALSE),
+('Olaf', 2, 1, FALSE, FALSE),
+('Buscapé', 16, 18, FALSE, FALSE),
+('Chicó', 13, 29, FALSE, FALSE),
+('Mestre Oogway', 3, 1000, TRUE, FALSE),
+('Pumba', 6, 7, FALSE, FALSE),
+('Raiva', 1, 33, FALSE, FALSE),
+('Woody', 10, 35, FALSE, FALSE),
+('Alex', 7, 10, FALSE, FALSE),
+('Bing Bong', 1, 6, TRUE, FALSE),
+('Dona Hermínia', 12, 60, FALSE, FALSE),
+('Manny', 8, 30, FALSE, FALSE),
+('Burro', 4, 28, FALSE, FALSE),
+('Hulk', 11, 45, FALSE, TRUE),
+('Capitão Nascimento', 14, 35, FALSE, FALSE),
+('Simba', 6, 5, FALSE, FALSE),
+('Rainha Má', 5, 40, TRUE, FALSE),
+('Elsa', 2, 21, FALSE, FALSE),
+('Sr. Incrível', 9, 40, FALSE, TRUE),
+('Gavião Arqueiro', 11, 40, FALSE, TRUE),
+('Timão', 6, 6, FALSE, FALSE),
+('Mulher-Elástica', 9, 38, FALSE, TRUE),
+('Buzz Lightyear', 10, 30, FALSE, FALSE),
+('Sr. Cabeça de Batata', 10, 45, FALSE, FALSE),
+('Medo', 1, 33, FALSE, FALSE);
+
+

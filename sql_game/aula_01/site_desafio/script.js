@@ -1,7 +1,7 @@
 const deslocamento = 3;
 let bloqueado = false;
 let bloqueioTimeout;
-const TEMPO_BLOQUEIO = 3 * 60 * 1000;
+const TEMPO_BLOQUEIO = 60 * 60 * 1000;
 
 function descriptografarTexto(texto) {
   let textoDescriptografado = "";
@@ -85,6 +85,21 @@ function checkPassword() {
   if (inputValues.length !== 8) {
     alert("A senha deve ter 8 caracteres!");
     return;
+  }
+
+  // Verificar se há 3 ou mais caracteres iguais
+  let charCount = {};
+  for (let i = 0; i < inputValues.length; i++) {
+    let char = inputValues[i];
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  // Se houver 3 ou mais caracteres iguais, bloqueia o usuário
+  for (let char in charCount) {
+    if (charCount[char] >= 3) {
+      alert("A senha não pode ter 3 ou mais caracteres iguais!");
+      return;
+    }
   }
 
   attemptCount++;
