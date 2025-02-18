@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demonstração de Propriedades CSS</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-left: 270px;
+        margin-right: auto;
+      }
+
+      .example {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+
+      .example h2 {
+        margin-top: 0;
+        color: #ff4500;
+      }
+
+      .code {
+        font-family: "Courier New", monospace;
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      hr {
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #ddd;
+      }
+      .sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #333;
+        padding-top: 20px;
+        color: white;
+        overflow: auto;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        padding: 15px;
+        text-align: left;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+        transition: background-color 0.3s;
+      }
+
+      .sidebar ul li a:hover {
+        background-color: #575757;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <ul>
+        <li><a href="#color">Color</a></li>
+        <li><a href="#font-family">Font Family</a></li>
+        <li><a href="#font-size">Font Size</a></li>
+        <li><a href="#font-weight">Font Weight</a></li>
+        <li><a href="#text-align">Text Align</a></li>
+        <li><a href="#text-decoration">Text Decoration</a></li>
+        <li><a href="#line-height">Line Height</a></li>
+        <li><a href="#text-transform">Text Transform</a></li>
+        <li><a href="#letter-spacing">Letter Spacing</a></li>
+        <li><a href="#word-spacing">Word Spacing</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#border">Border</a></li>
+        <li><a href="#border-radius">Border Radius</a></li>
+        <li><a href="#margin">Margin</a></li>
+        <li><a href="#padding">Padding</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>Demonstração de Propriedades CSS</h1>
+
+      <!-- Exemplo 1: color -->
+      <div class="example" id="color">
+        <h2>Propriedade: <code>color</code></h2>
+        <div class="code">color: #ff0000;</div>
+        <p style="color: #ff0000">Este texto está com a cor vermelha.</p>
+        <hr />
+
+        <div class="code">color: #008000;</div>
+        <p style="color: #008000">Este texto está com a cor verde.</p>
+        <hr />
+
+        <div class="code">color: #0000ff;</div>
+        <p style="color: #0000ff">Este texto está com a cor azul.</p>
+        <hr />
+
+        <div class="code">color: #800080;</div>
+        <p style="color: #800080">Este texto está com a cor roxa.</p>
+      </div>
+
+      <!-- Exemplo 2: font-family -->
+      <div class="example" id="font-family">
+        <h2>Propriedade: <code>font-family</code></h2>
+        <div class="code">font-family: 'Georgia', serif;</div>
+        <p style="font-family: 'Georgia', serif">
+          Este texto está com a fonte Georgia.
+        </p>
+        <hr />
+
+        <div class="code">font-family: 'Arial', sans-serif;</div>
+        <p style="font-family: 'Arial', sans-serif">
+          Este texto está com a fonte Arial.
+        </p>
+        <hr />
+
+        <div class="code">font-family: 'Courier New', monospace;</div>
+        <p style="font-family: 'Courier New', monospace">
+          Este texto está com a fonte Courier New.
+        </p>
+        <hr />
+
+        <div class="code">font-family: 'Times New Roman', serif;</div>
+        <p style="font-family: 'Times New Roman', serif">
+          Este texto está com a fonte Times New Roman.
+        </p>
+      </div>
+
+      <!-- Exemplo 3: font-size -->
+      <div class="example" id="font-size">
+        <h2>Propriedade: <code>font-size</code></h2>
+        <div class="code">font-size: 24px;</div>
+        <p style="font-size: 24px">Este texto está com tamanho de 24px.</p>
+        <hr />
+
+        <div class="code">font-size: 32px;</div>
+        <p style="font-size: 32px">Este texto está com tamanho de 32px.</p>
+        <hr />
+
+        <div class="code">font-size: 18px;</div>
+        <p style="font-size: 18px">Este texto está com tamanho de 18px.</p>
+        <hr />
+
+        <div class="code">font-size: 14px;</div>
+        <p style="font-size: 14px">Este texto está com tamanho de 14px.</p>
+      </div>
+
+      <!-- Exemplo 4: font-weight -->
+      <div class="example" id="font-weight">
+        <h2>Propriedade: <code>font-weight</code></h2>
+        <div class="code">font-weight: bold;</div>
+        <p style="font-weight: bold">Este texto está em negrito.</p>
+        <hr />
+
+        <div class="code">font-weight: normal;</div>
+        <p style="font-weight: normal">Este texto está com peso normal.</p>
+        <hr />
+
+        <div class="code">font-weight: 100;</div>
+        <p style="font-weight: 100">
+          Este texto está com peso de 100 (mais fino).
+        </p>
+        <hr />
+
+        <div class="code">font-weight: 900;</div>
+        <p style="font-weight: 900">
+          Este texto está com peso de 900 (mais grosso).
+        </p>
+      </div>
+
+      <!-- Exemplo 5: text-align -->
+      <div class="example" id="text-align">
+        <h2>Propriedade: <code>text-align</code></h2>
+        <div class="code">text-align: center;</div>
+        <p style="text-align: center">
+          Este texto está centralizado. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Officiis sint porro harum architecto, doloribus
+          perferendis saepe quas nam optio earum laudantium repellendus
+          repudiandae facere quod minima deserunt odit accusamus expedita.
+        </p>
+        <hr />
+
+        <div class="code">text-align: left;</div>
+        <p style="text-align: left">
+          Este texto está alinhado à esquerda. Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. A saepe voluptatibus, magni excepturi
+          iusto eaque minima laborum molestias est culpa quis! Incidunt
+          cupiditate nihil, autem animi aliquid a natus quidem?
+        </p>
+        <hr />
+
+        <div class="code">text-align: right;</div>
+        <p style="text-align: right">
+          Este texto está alinhado à direita. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Harum quo id amet, neque veniam quam
+          aperiam. Tempora possimus aut eligendi, provident quo harum libero,
+          dolor, dolorem adipisci consequatur laudantium magni.
+        </p>
+        <hr />
+
+        <div class="code">text-align: justify;</div>
+        <p style="text-align: justify">
+          Este texto está justificado. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Voluptas ex iusto rerum et! Dolorum laudantium odio
+          deserunt, magnam placeat quia tempore dolore ipsa mollitia maiores
+          nobis? Aliquam, nam odio! Aperiam.
+        </p>
+      </div>
+
+      <!-- Exemplo 6: text-decoration -->
+      <div class="example" id="text-decoration">
+        <h2>Propriedade: <code>text-decoration</code></h2>
+        <div class="code">text-decoration: underline;</div>
+        <p style="text-decoration: underline">Este texto está sublinhado.</p>
+        <hr />
+
+        <div class="code">text-decoration: line-through;</div>
+        <p style="text-decoration: line-through">Este texto está riscado.</p>
+        <hr />
+
+        <div class="code">text-decoration: none;</div>
+        <p style="text-decoration: none">Este texto não tem decoração.</p>
+        <hr />
+
+        <div class="code">text-decoration: underline overline;</div>
+        <p style="text-decoration: underline overline">
+          Este texto está sublinhado e com uma linha acima.
+        </p>
+      </div>
+
+      <!-- Exemplo 7: line-height -->
+      <div class="example" id="line-height">
+        <h2>Propriedade: <code>line-height</code></h2>
+        <div class="code">line-height: 1;</div>
+        <p style="line-height: 1">
+          Este texto tem um espaçamento entre linhas de 1. Lorem, ipsum dolor
+          sit amet consectetur adipisicing elit. Corrupti suscipit voluptatum
+          vero, nisi sint dignissimos? Error ducimus culpa autem unde quasi.
+          Beatae alias libero ipsam cum nesciunt nisi dolorem suscipit.
+        </p>
+        <hr />
+
+        <div class="code">line-height: 1.5;</div>
+        <p style="line-height: 1.5">
+          Este texto tem um espaçamento entre linhas de 1.5. Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Possimus saepe hic perferendis
+          expedita! Molestias doloremque dolorem, fugit vel fuga, tempora nisi
+          praesentium repellat et ratione quas? Qui temporibus aut ipsum?
+        </p>
+        <hr />
+
+        <div class="code">line-height: 3;</div>
+        <p style="line-height: 3">
+          Este texto tem um espaçamento entre linhas de 3. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Optio ex fugiat molestiae veritatis
+          voluptatum accusamus quaerat atque illo ipsa magnam? Amet voluptas
+          cumque autem quibusdam esse iure repellat possimus pariatur?
+        </p>
+        <hr />
+
+        <div class="code">line-height: 5;</div>
+        <p style="line-height: 5">
+          Este texto tem um espaçamento entre linhas de 5. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Dignissimos quis ratione cupiditate
+          aperiam, quas officiis iusto accusantium nulla hic facere nisi
+          corrupti quaerat. Delectus mollitia sit consequatur perspiciatis
+          doloremque expedita.
+        </p>
+      </div>
+
+      <!-- Exemplo 8: text-transform -->
+      <div class="example" id="text-transform">
+        <h2>Propriedade: <code>text-transform</code></h2>
+        <div class="code">text-transform: uppercase;</div>
+        <p style="text-transform: uppercase">Este texto está em maiúsculas.</p>
+        <hr />
+
+        <div class="code">text-transform: lowercase;</div>
+        <p style="text-transform: lowercase">Este texto está em minúsculas.</p>
+        <hr />
+
+        <div class="code">text-transform: capitalize;</div>
+        <p style="text-transform: capitalize">
+          Este texto está com as primeiras letras de cada palavra em maiúsculas.
+        </p>
+        <hr />
+
+        <div class="code">text-transform: none;</div>
+        <p style="text-transform: none">
+          Este texto está sem transformação de case.
+        </p>
+      </div>
+
+      <!-- Exemplo 9: letter-spacing -->
+      <div class="example" id="letter-spacing">
+        <h2>Propriedade: <code>letter-spacing</code></h2>
+        <div class="code">letter-spacing: 1px;</div>
+        <p style="letter-spacing: 1px">
+          Este texto tem um espaçamento entre letras de 1px.
+        </p>
+        <hr />
+
+        <div class="code">letter-spacing: 5px;</div>
+        <p style="letter-spacing: 5px">
+          Este texto tem um espaçamento entre letras de 5px.
+        </p>
+        <hr />
+
+        <div class="code">letter-spacing: 10px;</div>
+        <p style="letter-spacing: 10px">
+          Este texto tem um espaçamento entre letras de 10px.
+        </p>
+        <hr />
+
+        <div class="code">letter-spacing: 20px;</div>
+        <p style="letter-spacing: 20px">
+          Este texto tem um espaçamento entre letras de 20px.
+        </p>
+      </div>
+
+      <!-- Exemplo 10: word-spacing -->
+      <div class="example" id="word-spacing">
+        <h2>Propriedade: <code>word-spacing</code></h2>
+        <div class="code">word-spacing: 3px;</div>
+        <p style="word-spacing: 3px">
+          Este texto tem um espaçamento entre palavras de 3px.
+        </p>
+        <hr />
+
+        <div class="code">word-spacing: 5px;</div>
+        <p style="word-spacing: 5px">
+          Este texto tem um espaçamento entre palavras de 5px.
+        </p>
+        <hr />
+
+        <div class="code">word-spacing: 15px;</div>
+        <p style="word-spacing: 15px">
+          Este texto tem um espaçamento entre palavras de 15px.
+        </p>
+        <hr />
+
+        <div class="code">word-spacing: 40px;</div>
+        <p style="word-spacing: 40px">
+          Este texto tem um espaçamento entre palavras de 40px.
+        </p>
+      </div>
+
+      <!-- Exemplo 11: background -->
+      <div class="example" id="background">
+        <h2>Propriedade: <code>background</code></h2>
+        <div class="code">background: #ffcc00;</div>
+        <p style="background: #ffcc00; padding: 10px">
+          Este texto tem um fundo amarelo.
+        </p>
+        <hr />
+
+        <div class="code">background: #00ff00;</div>
+        <p style="background: #00ff00; padding: 10px">
+          Este texto tem um fundo verde.
+        </p>
+        <hr />
+
+        <div class="code">background: #0000ff;</div>
+        <p style="background: #0000ff; padding: 10px">
+          Este texto tem um fundo azul.
+        </p>
+        <hr />
+
+        <div class="code">background: #800080;</div>
+        <p style="background: #800080; padding: 10px">
+          Este texto tem um fundo roxo.
+        </p>
+      </div>
+
+      <!-- Exemplo 12: border -->
+      <div class="example" id="border">
+        <h2>Propriedade: <code>border</code></h2>
+        <div class="code">border: 2px solid #0000ff;</div>
+        <p style="border: 2px solid #0000ff; padding: 10px">
+          Este texto tem uma borda azul.
+        </p>
+        <hr />
+
+        <div class="code">border: 3px dashed #ff0000;</div>
+        <p style="border: 3px dashed #ff0000; padding: 10px">
+          Este texto tem uma borda vermelha e tracejada.
+        </p>
+        <hr />
+
+        <div class="code">border: 3px dotted #00ff00;</div>
+        <p style="border: 3px dotted #00ff00; padding: 10px">
+          Este texto tem uma borda verde e pontilhada.
+        </p>
+        <hr />
+
+        <div class="code">border: 4px solid #000000;</div>
+        <p style="border: 4px solid #000000; padding: 10px">
+          Este texto tem uma borda preta e sólida.
+        </p>
+      </div>
+
+      <!-- Exemplo 13: border-radius -->
+      <div class="example" id="border-radius">
+        <h2>Propriedade: <code>border-radius</code></h2>
+        <div class="code">border-radius: 0px;</div>
+        <p style="border: 2px solid #0000ff; border-radius: 0px; padding: 10px">
+          Este texto tem bordas quadradas (sem arredondamento).
+        </p>
+        <hr />
+
+        <div class="code">border-radius: 10px;</div>
+        <p
+          style="border: 2px solid #0000ff; border-radius: 10px; padding: 10px"
+        >
+          Este texto tem bordas arredondadas.
+        </p>
+        <hr />
+
+        <div class="code">border-radius: 15px;</div>
+        <p
+          style="border: 2px solid #0000ff; border-radius: 15px; padding: 10px"
+        >
+          Este texto tem bordas com raio de 15px.
+        </p>
+        <hr />
+        <div class="code">border-radius: 50px;</div>
+        <p
+          style="border: 2px solid #0000ff; border-radius: 50px; padding: 10px"
+        >
+          Este texto tem bordas com raio de 50px.
+        </p>
+        <hr />
+      </div>
+
+      <!-- Exemplo 14: margin -->
+      <div class="example" id="margin">
+        <h2>Propriedade: <code>margin</code></h2>
+        <div class="code">margin: 0px;</div>
+        <p style="margin: 0px; background: #eee; padding: 10px">
+          Este texto não tem margem.
+        </p>
+        <hr />
+        <div class="code">margin: 10px;</div>
+        <p style="margin: 10px; background: #eee; padding: 10px">
+          Este texto tem uma margem de 10px.
+        </p>
+        <hr />
+        <div class="code">margin: 20px;</div>
+        <p style="margin: 20px; background: #eee; padding: 10px">
+          Este texto tem uma margem de 20px.
+        </p>
+        <hr />
+
+        <div class="code">margin: 70px;</div>
+        <p style="margin: 70px; background: #eee; padding: 10px">
+          Este texto tem uma margem de 70px.
+        </p>
+        <hr />
+      </div>
+
+      <!-- Exemplo 15: padding -->
+      <div class="example" id="padding">
+        <h2>Propriedade: <code>padding</code></h2>
+        <div class="code">padding: 0px;</div>
+        <p style="padding: 0px; background: #eee">
+          Este texto não tem preenchimento interno.
+        </p>
+        <hr />
+
+        <div class="code">padding: 10px;</div>
+        <p style="padding: 10px; background: #eee">
+          Este texto tem um preenchimento interno de 10px.
+        </p>
+        <hr />
+
+        <div class="code">padding: 20px;</div>
+        <p style="padding: 20px; background: #eee">
+          Este texto tem um preenchimento interno de 20px.
+        </p>
+        <hr />
+
+        <div class="code">padding: 70px;</div>
+        <p style="padding: 70px; background: #eee">
+          Este texto tem um preenchimento interno de 70px.
+        </p>
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
