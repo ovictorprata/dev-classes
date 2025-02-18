@@ -22,6 +22,6 @@ Vamos aprender HTML e CSS juntos!
 
 ---
 
-**Link do Deploy:** [https://ovictorprata.github.io/dev-classes/](https://ovictorprata.github.io/aulas-html-css/)
+**Link do Deploy:** [https://ovictorprata.github.io/dev-classes/](https://ovictorprata.github.io/dev-classes/)
 
 Divirta-se aprendendo e criando! 🚀
