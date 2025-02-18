@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #8a00ce;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1 {
+  color: #2a2a40;
+}
+h2 {
+  color: #8a4fff;
+}
+
+a {
+  color: #8a4fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b57aff;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.theme-section {
+  background-color: #2a2a40;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.theme-section h2 {
+  margin-bottom: 15px;
+}
+
+.lesson-list {
+  list-style-type: none;
+}
+
+.lesson-list li {
+  background-color: #3e3e5e;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.lesson-list li:hover {
+  background-color: #4a4a6e;
+}
+
+.lesson-list a {
+  display: block;
+  color: #e0e0e0;
+}
+
+.lesson-list a:hover {
+  color: #b57aff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .theme-section {
+    padding: 15px;
+  }
+
+  .lesson-list li {
+    padding: 8px;
+  }
+}
