@@ -1,27 +1,29 @@
-### Bem-vindo ao Projeto de Aprendizado de HTML e CSS!
+# Bem-vindo ao Projeto de Aprendizado de SQL, JavaScript, HTML e CSS!
 
-Este repositório foi criado com o objetivo de ajudar alunos a aprenderem e praticarem conceitos fundamentais de HTML e CSS de uma forma prática e interativa.
+Este repositório foi criado com o objetivo de ajudar alunos a aprenderem e praticarem conceitos fundamentais de SQL, JavaScript, HTML e CSS de forma prática e interativa. A estrutura está organizada para facilitar o aprendizado de cada uma dessas tecnologias, permitindo que você explore desde o básico até projetos mais avançados.
 
 ### Recursos Disponíveis:
 
-- **Exemplos Práticos:** Encontre exemplos claros e simples de HTML e CSS para entender como essas linguagens funcionam juntas para criar páginas web.
-
-- **Exercícios:** Desafie-se com uma série de exercícios projetados para fortalecer seu conhecimento em HTML e CSS. Cada exercício vem com instruções claras e uma estrutura básica para começar.
+- **SQL:** Aprenda e pratique comandos SQL com exercícios e desafios práticos.
+- **JavaScript:** Melhore suas habilidades em JavaScript com exemplos e exercícios que envolvem interatividade e manipulação de dados.
+- **HTML/CSS:** Explore como estruturar e estilizar páginas web, com exemplos claros e desafios práticos.
 
 ### Como Utilizar:
 
-1. **Explore os Exemplos:** Navegue pelos exemplos fornecidos na pasta `paginas_didaticas/` para ver como diferentes elementos HTML são estilizados com CSS.
+1. **Explore os Exemplos de HTML e CSS:** Navegue pelas pastas dentro de `html/` para ver como diferentes conceitos de HTML e CSS são aplicados. Por exemplo, explore a pasta `01_introducao_html` para aprender sobre a estrutura básica de uma página HTML, ou a pasta `04_css` para ver exemplos de como estilizar essas páginas.
 
-2. **Pratique com Exercícios:** Vá para a pasta `exercicios/` e escolha um exercício para completar.
+2. **Aprenda SQL:** Na pasta `sql/`, você encontrará exercícios e projetos práticos que ajudam a entender como usar o SQL em diferentes contextos, como o banco de dados de música ou desafios de manipulação de dados.
+
+3. **Pratique com JavaScript:** A pasta `js/` contém exemplos e exercícios para te ajudar a entender o funcionamento do JavaScript em páginas web interativas.
 
 ### Contribuições:
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests se você tiver sugestões de melhorias, correções ou novos exemplos/exercícios para adicionar.
+Contribuições são bem-vindas! Se você tem sugestões de melhorias, correções ou novos exemplos/exercícios para adicionar, sinta-se à vontade para abrir issues ou enviar pull requests.
 
-Vamos aprender HTML e CSS juntos!
+Vamos aprender e praticar juntos! 🚀
 
 ---
 
 **Link do Deploy:** [https://ovictorprata.github.io/dev-classes/](https://ovictorprata.github.io/dev-classes/)
 
-Divirta-se aprendendo e criando! 🚀
+Divirta-se enquanto aprende e cria!
