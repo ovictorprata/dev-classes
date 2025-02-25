@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soma de 2 Números</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../assets/brain_36_x_36.png"
+      type="image/png"
+    />
+    <script>
+      function somaNumeros() {
+        const num1 = parseInt(document.getElementById("num1").value);
+        const num2 = parseInt(document.getElementById("num2").value);
+        console.log(`A soma de ${num1} e ${num2} é ${num1 + num2}.`);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Digite dois números para somar:</h2>
+    <input
+      type="number"
+      id="num1"
+      placeholder="Digite o primeiro número"
+      required
+    />
+    <input
+      type="number"
+      id="num2"
+      placeholder="Digite o segundo número"
+      required
+    />
+    <button onclick="somaNumeros()">Calcular</button>
+  </body>
+</html>

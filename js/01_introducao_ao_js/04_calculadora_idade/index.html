@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Idade</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../assets/brain_36_x_36.png"
+      type="image/png"
+    />
+    <script>
+      function calcularIdade() {
+        const anoNascimento = parseInt(
+          document.getElementById("anoNascimento").value
+        );
+        const anoAtual = new Date().getFullYear();
+        const idade = anoAtual - anoNascimento;
+        console.log(`Você tem ${idade} anos.`);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Digite seu ano de nascimento:</h2>
+    <input
+      type="number"
+      id="anoNascimento"
+      placeholder="Digite o ano de nascimento"
+      required
+    />
+    <button onclick="calcularIdade()">Calcular Idade</button>
+  </body>
+</html>

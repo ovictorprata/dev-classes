@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nome e Idade</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../assets/brain_36_x_36.png"
+      type="image/png"
+    />
+    <script>
+      function mostrarNomeIdade() {
+        const nome = document.getElementById("nome").value;
+        const idade = document.getElementById("idade").value;
+        console.log(`Olá, ${nome}! Você tem ${idade} anos.`);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Digite seu nome e idade:</h2>
+    <input type="text" id="nome" placeholder="Digite seu nome" required />
+    <input type="number" id="idade" placeholder="Digite sua idade" required />
+    <button onclick="mostrarNomeIdade()">Enviar</button>
+  </body>
+</html>
