@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Reais para Dólares</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../../assets/brain_36_x_36.png"
+      type="image/png"
+    />
+
+    <script>
+      function converter() {
+        const valorReais = parseFloat(
+          document.getElementById("valorReais").value
+        );
+        const taxaConversao = 5.75; // 1 dólar = 5,75 reais
+        const valorDolares = valorReais / taxaConversao;
+        console.log(
+          `R$ ${valorReais} é equivalente a US$ ${valorDolares.toFixed(2)}.`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Digite um valor em reais para converter para dólares:</h2>
+    <input
+      type="number"
+      id="valorReais"
+      placeholder="Digite um valor em reais"
+      required
+    />
+    <button onclick="converter()">Converter</button>
+  </body>
+</html>

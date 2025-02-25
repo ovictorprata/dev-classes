@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Área e Perímetro de Retângulo</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../assets/brain_36_x_36.png"
+      type="image/png"
+    />
+
+    <script>
+      function calcularAreaPerimetro() {
+        const comprimento = parseFloat(
+          document.getElementById("comprimento").value
+        );
+        const largura = parseFloat(document.getElementById("largura").value);
+
+        if (
+          isNaN(comprimento) ||
+          isNaN(largura) ||
+          comprimento <= 0 ||
+          largura <= 0
+        ) {
+          console.log(
+            "Por favor, insira valores válidos para comprimento e largura."
+          );
+          return;
+        }
+
+        const area = comprimento * largura;
+        const perimetro = 2 * (comprimento + largura);
+
+        console.log(
+          `A área do retângulo é ${area} e o perímetro é ${perimetro}.`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Calculadora de Área e Perímetro de Retângulo</h2>
+    <label for="comprimento">Comprimento:</label>
+    <input
+      type="number"
+      id="comprimento"
+      placeholder="Digite o comprimento"
+      required
+    />
+    <br />
+    <label for="largura">Largura:</label>
+    <input type="number" id="largura" placeholder="Digite a largura" required />
+    <br /><br />
+    <button onclick="calcularAreaPerimetro()">Calcular</button>
+  </body>
+</html>
